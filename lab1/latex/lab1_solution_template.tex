@@ -93,10 +93,12 @@
 	
 	\subsection{Written Questions}
 	\begin{enumerate}
-		\item Answer here
-		\item Answer here
-		\item Answer here
-		\item Answer here
+		\item A CMakeList is the main CMake file to build a ROS package. It contains a set of instruction describing the source files and target files of a project.
+CMakeList is used to create a make file, where make file is a build system which builds the code to an executable. So, CMake List is basically a generator of build systems. 
+
+		\item Yes, CMakeList is also required for Python in ROS. No executable object will be created. 
+		\item You will run it in your workspace root.
+		\item The purpose of setupbash is to configure Environment Variables to the  correct path. The 1st setup.bash files sets general ROS Environment Variable, while the second setup.bash file sets path to that specific workspace. 
 		
 	\end{enumerate}{}
 
@@ -104,10 +106,14 @@
 	
 	\subsection{Written Questions}
 	\begin{enumerate}
+		\item A nodehandle object basically represents the node itself. It controls the initialization and shutdown of a node. Also, you can specify a namespace relative to the nodehandle.
+It is possible to have multiple nodehandle objects in a node.
+
+		\item ros::SpinOnce checks for callbacks and service calls once when you call it. 
+Ros::spin, on the other hand, repeatedly calls ros::SpinOnce so it spin until the node dies. 
+
 		\item Answer here
-		\item Answer here
-		\item Answer here
-		\item Answer here
+		\item ros::rate allows you to call a function periodically. It takes account of the varying execution time and adjust its sleep time accordingly. 
 		\item Answer here
 	\end{enumerate}{}
 			
@@ -115,16 +121,18 @@
 	
 	\subsection{Written Questions}
 	\begin{enumerate}
-		\item Answer here
-		\item Answer here 
+		\item This is because C++ doesn’t understand .msg files. So Cmake created a .h header file to represent the msg file in what C++ understands. 
+		\item Header is not a primitive type, and is instead resolved to std_msgs/ Header. It is possible to include in my application since I have access to std_msgs as well. It provide data on a sequential id, time stamp and frame id. 
 	\end{enumerate}{}
 
 	\section{Recording and Publishing Bag Files}
 	\subsection{Written Questions}
 	
 	\begin{enumerate}
-		\item Answer here
-		\item Answer here 
+		\item The bag file is saved in the directory where rosbag record is called. You can change where it’s saved by calling rosbag record from the directory you desire. 
+		\item The bag file is saved in the directory specified by the argument ‘’agrs”.
+Yes. This can be done by filling node arguments in the launch file. The argument “args” represent the path the bag file would be saved. 
+ 
 	\end{enumerate}{}
 
 
